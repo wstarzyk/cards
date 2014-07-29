@@ -1,0 +1,35 @@
+<h1>Decks</h1>
+
+<p><a href="/new_deck">Add a New Deck</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Course</th>
+      <th>Teacher</th>
+      <th>Student</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @decks.each do |deck| %>
+    <tr>
+          <td><%= deck.name %></td>
+          <td><%= deck.subject %></td>
+          <td><%= deck.course %></td>
+          <td><%= deck.teacher %></td>
+          <td><%= deck.student %></td>
+          <td><a href="/decks/<%= deck.id %>">Show</a>
+        </td>
+      <td><a href="/decks/<%= deck.id %>/edit">Edit</a></td>
+      <td><a href="/decks/<%= deck.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

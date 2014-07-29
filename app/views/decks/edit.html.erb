@@ -1,0 +1,29 @@
+<h1>Editing Deck #<%= @deck.id %></h1>
+
+<form action="/decks/<%= @deck.id %>/update">
+  <div>
+    <label for="name">name</label><br />
+    <input id="name" name="name" value="<%= @deck.name  %>" type="text" />
+  </div>
+  <div>
+    <label for="subject">subject</label><br />
+    <input id="subject" name="subject" value="<%= @deck.subject  %>" type="text" />
+  </div>
+  <div>
+    <label for="course">course</label><br />
+    <input id="course" name="course" value="<%= @deck.course  %>" type="text" />
+  </div>
+  <div>
+    <label for="teacher">teacher</label><br />
+    <input id="teacher" name="teacher" value="<%= @deck.teacher  %>" type="text" />
+  </div>
+  <div>
+    <label for="student">student</label><br />
+    <input id="student" name="student" value="<%= @deck.student  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

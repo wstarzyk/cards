@@ -1,0 +1,25 @@
+<h1>Deck #<%= @deck.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @deck.name %></p>
+</div>
+<div>
+  <strong>Subject</strong>:<br />
+  <p><%= @deck.subject %></p>
+</div>
+<div>
+  <strong>Course</strong>:<br />
+  <p><%= @deck.course %></p>
+</div>
+<div>
+  <strong>Teacher</strong>:<br />
+  <p><%= @deck.teacher %></p>
+</div>
+<div>
+  <strong>Student</strong>:<br />
+  <p><%= @deck.student %></p>
+</div>
+
+<a href="/decks/<%= @deck.id %>/edit">Edit</a> |
+<a href="/decks/<%= @deck.id %>/destroy">Destroy</a>

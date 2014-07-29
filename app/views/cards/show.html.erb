@@ -1,0 +1,17 @@
+<h1>Card #<%= @card.id %></h1>
+
+<div>
+  <strong>Front</strong>:<br />
+  <p><%= @card.front %></p>
+</div>
+<div>
+  <strong>Back</strong>:<br />
+  <p><%= @card.back %></p>
+</div>
+<div>
+  <strong>Deck</strong>:<br />
+  <p><%= @card.deck_id %></p>
+</div>
+
+<a href="/cards/<%= @card.id %>/edit">Edit</a> |
+<a href="/cards/<%= @card.id %>/destroy">Destroy</a>

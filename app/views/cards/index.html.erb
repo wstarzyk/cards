@@ -1,0 +1,31 @@
+<h1>Cards</h1>
+
+<p><a href="/new_card">Add a New Card</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Front</th>
+      <th>Back</th>
+      <th>Deck</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @cards.each do |card| %>
+    <tr>
+          <td><%= card.front %></td>
+          <td><%= card.back %></td>
+          <td><%= card.deck_id %></td>
+          <td><a href="/cards/<%= card.id %>">Show</a>
+        </td>
+      <td><a href="/cards/<%= card.id %>/edit">Edit</a></td>
+      <td><a href="/cards/<%= card.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

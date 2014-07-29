@@ -1,0 +1,21 @@
+<h1>Editing Card #<%= @card.id %></h1>
+
+<form action="/cards/<%= @card.id %>/update">
+  <div>
+    <label for="front">front</label><br />
+    <input id="front" name="front" value="<%= @card.front  %>" type="text" />
+  </div>
+  <div>
+    <label for="back">back</label><br />
+    <input id="back" name="back" value="<%= @card.back  %>" type="text" />
+  </div>
+  <div>
+    <label for="deck_id">deck_id</label><br />
+    <input id="deck_id" name="deck_id" value="<%= @card.deck_id  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+
