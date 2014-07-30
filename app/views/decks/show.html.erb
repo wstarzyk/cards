@@ -1,25 +1,48 @@
-<h1>Deck #<%= @deck.id %></h1>
+<div id="myCarousel" class="carousel slide">  
+  <!-- Carousel items -->  
+  <div class="carousel-inner">  
+    <div class="active item"><img src="http://i.imgur.com/pVQBeXx.png"></div> 
+       <% @deck.cards.each do | card  | %>
+    
+    
+    <div class="item center">
+ <img src="http://i.imgur.com/pVQBeXx.png" alt="notecard_front">
+  <div class="carousel-caption">
+    <h1 class="cardtext"><%=  card.front    %></h1>
+    <p>...</p>
+  </div>
+</div>
+    
+     <div class="item">
+<img src="http://i.imgur.com/pVQBeXx.png" alt="notecard_back"  >
+  <div class="carousel-caption">
+    <h1 class="cardtext"><%=  card.front    %></h1>
+    <p class="cardtext"><%=  card.back   %></p>
+  </div>
+</div>
+    
+    <% end %>
+  </div>  
+  <!-- Carousel nav -->  
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>  
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>  
+</div> 
 
-<div>
-  <strong>Name</strong>:<br />
-  <p><%= @deck.name %></p>
+
+<div class="container">
+  <div class="row light">
+  <div class="col-md-1"><strong>Name:</strong></div>
+  <div class="col-md-1"><p><%= @deck.name %></p></div>
+  <div class="col-md-1"><strong>Subject:</strong></div>
+  <div class="col-md-1"><p><%= @deck.subject %></p></div>
+  <div class="col-md-1"><strong>Course:</strong></div>
+  <div class="col-md-1"><p><%= @deck.course %></p></div>
+  <div class="col-md-1"><strong>Teacher:</strong></div>
+  <div class="col-md-1"><p><%= @deck.teacher %></p></div>
+  <div class="col-md-1"> <strong>Builder:</strong></div>
+  <div class="col-md-1"><p><%= @deck.student %></p></div>
+  <div class="col-md-1"></div>
+  <div class="col-md-1"></div>
 </div>
-<div>
-  <strong>Subject</strong>:<br />
-  <p><%= @deck.subject %></p>
-</div>
-<div>
-  <strong>Course</strong>:<br />
-  <p><%= @deck.course %></p>
-</div>
-<div>
-  <strong>Teacher</strong>:<br />
-  <p><%= @deck.teacher %></p>
-</div>
-<div>
-  <strong>Student</strong>:<br />
-  <p><%= @deck.student %></p>
 </div>
 
-<a href="/decks/<%= @deck.id %>/edit">Edit</a> |
-<a href="/decks/<%= @deck.id %>/destroy">Destroy</a>

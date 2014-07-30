@@ -9,10 +9,13 @@
     <label for="back">back</label><br />
     <input id="back" name="back" type="text" />
   </div>
-  <div>
-    <label for="deck_id">deck_id</label><br />
-    <input id="deck_id" name="deck_id" type="text" />
-  </div>
+   
+   <select id="deck_id" name="deck_id" >
+     <% Deck.all.each do |deck| %>
+     <option value="<%= deck.id %>"> <%=deck.name%> </option>
+    <% end %>
+  </select>
+  
   <div>
     <input type="submit">
   </div>

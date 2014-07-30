@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/test' => 'cards#test'
   # Routes for the Card resource:
   # CREATE
   get '/new_card' => 'cards#new'
